@@ -12,7 +12,7 @@ client = chromadb.PersistentClient(path = data_folder_path)
 
 openai_ef = OpenAIEmbeddingFunction(api_key=os.getenv("OPENAI_API_KEY"),model_name="text-embedding-3-small")
 
-client.delete_collection(name="test-collection")
+
 client.create_collection(name="test-collection",embedding_function=openai_ef)
 
 collection =  client.get_collection(name="test-collection")

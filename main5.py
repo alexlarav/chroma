@@ -4,10 +4,10 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 from langchain_community.document_loaders import PyPDFLoader,DirectoryLoader
 from langchain_openai import ChatOpenAI
-import requests
 from bs4 import BeautifulSoup
 import os
 
+os.environ["OPENAI_API_KEY"] = "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"
 persist_directory = 'data5/docs_db'
 embedding = OpenAIEmbeddings()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
